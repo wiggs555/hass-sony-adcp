@@ -8,6 +8,7 @@
   "integration_type": "device",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/wiggs555/hass-sony-adcp/issues",
+  "loggers": ["custom_components.sony_adcp"],
   "requirements": [],
   "version": "0.1.0"
 }

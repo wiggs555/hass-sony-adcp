@@ -1,8 +1,23 @@
 # hass-sony-adcp
 
+[![Validate](https://github.com/wiggs555/hass-sony-adcp/actions/workflows/validate.yml/badge.svg)](https://github.com/wiggs555/hass-sony-adcp/actions/workflows/validate.yml)
+
 Home Assistant custom integration for controlling Sony projectors over **ADCP** (Advanced Display Control Protocol).
 
 Tested against the **Sony VPL-VW295ES**, with support expected for other Sony home cinema projectors that expose ADCP on TCP port **53595**.
+
+## Repository layout
+
+This repository follows the [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/):
+
+```text
+hass-sony-adcp/
+├── custom_components/sony_adcp/   # Integration code (installed by HACS)
+├── hacs.json                      # HACS metadata
+├── info.md                        # HACS info panel content
+├── tests/                         # Unit tests (not installed)
+└── .github/workflows/validate.yml # hassfest + HACS CI checks
+```
 
 ## Features
 
@@ -30,6 +45,8 @@ On the projector web UI (`http://<projector-ip>`):
 3. Install **Sony ADCP Projector**.
 4. Restart Home Assistant.
 5. Go to **Settings → Devices & Services → Add Integration** and search for **Sony ADCP Projector**.
+
+To publish as a default HACS repository later, register the integration in [home-assistant/brands](https://github.com/home-assistant/brands) and remove the `ignore: brands` line from `.github/workflows/validate.yml`.
 
 ## Manual installation
 

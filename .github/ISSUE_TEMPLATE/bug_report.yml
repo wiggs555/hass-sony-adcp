@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a problem with the Sony ADCP integration
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue. Include as much detail as you can.
+  - type: input
+    id: version
+    attributes:
+      label: Integration version
+      description: Version shown in HACS or in the integration manifest
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: ha-version
+    attributes:
+      label: Home Assistant version
+      placeholder: "2024.1.0"
+    validations:
+      required: true
+  - type: input
+    id: projector
+    attributes:
+      label: Projector model
+      placeholder: "VPL-VW295ES"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, expected behavior, and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Enable debug logging for `custom_components.sony_adcp` and paste relevant lines
+      render: shell
