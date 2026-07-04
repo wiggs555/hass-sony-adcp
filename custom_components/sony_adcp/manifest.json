@@ -1,0 +1,13 @@
+{
+  "domain": "sony_adcp",
+  "name": "Sony ADCP Projector",
+  "codeowners": ["@wiggs555"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/wiggs555/hass-sony-adcp",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/wiggs555/hass-sony-adcp/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

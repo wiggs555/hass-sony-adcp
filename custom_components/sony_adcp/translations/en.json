@@ -1,0 +1,68 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sony ADCP Projector",
+        "description": "Connect to a Sony projector using the ADCP protocol (TCP port 53595).",
+        "data": {
+          "host": "Host",
+          "name": "Name",
+          "password": "ADCP password",
+          "port": "ADCP port",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      },
+      "discover": {
+        "title": "Select discovered projector",
+        "description": "Choose a projector discovered via SDAP.",
+        "data": {
+          "host": "Projector"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the projector.",
+      "invalid_auth": "Authentication failed. Check the ADCP password."
+    },
+    "abort": {
+      "already_configured": "This projector is already configured.",
+      "discovery_failed": "Projector discovery failed.",
+      "no_devices_found": "No Sony projectors were discovered on the network."
+    }
+  },
+  "entity": {
+    "select": {
+      "picture_mode": { "name": "Picture preset" },
+      "input": { "name": "Input" },
+      "aspect": { "name": "Aspect ratio" },
+      "gamma": { "name": "Gamma" },
+      "color_temperature": { "name": "Color temperature" },
+      "motionflow": { "name": "Motionflow" },
+      "lens_memory": { "name": "Lens memory" }
+    },
+    "sensor": {
+      "power_status": { "name": "Power status" },
+      "model": { "name": "Model" }
+    },
+    "button": {
+      "start_calibration": { "name": "Start calibration" },
+      "reset_calibration": { "name": "Reset calibration" },
+      "return_calibration": { "name": "Return calibration" }
+    },
+    "switch": {
+      "calibration_auto": { "name": "Auto calibration" }
+    }
+  },
+  "services": {
+    "send_command": {
+      "name": "Send command",
+      "description": "Send a raw ADCP command to the projector.",
+      "fields": {
+        "command": {
+          "name": "Command",
+          "description": "Raw ADCP command string."
+        }
+      }
+    }
+  }
+}

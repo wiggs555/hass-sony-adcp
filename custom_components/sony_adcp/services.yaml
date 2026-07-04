@@ -1,0 +1,11 @@
+send_command:
+  name: Send command
+  description: Send a raw ADCP command to the projector.
+  fields:
+    command:
+      name: Command
+      description: Raw ADCP command string, for example power "on".
+      required: true
+      example: 'picture_mode "reference"'
+      selector:
+        text:
